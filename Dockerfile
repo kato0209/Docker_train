@@ -8,8 +8,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && apt-get install -y nodejs yarn
 WORKDIR /app
 COPY ./src /app
-RUN bundle config --local set path 'vendor/bundle' \
-    && bundle install
+RUN bundle install
 
 COPY start.sh /start.sh
 RUN chmod 744 /start.sh
