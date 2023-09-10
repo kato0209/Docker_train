@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7
+      - image: cimg/ruby:2.7
     working_directory: ~/docker_train/src
     steps:
       - checkout:
