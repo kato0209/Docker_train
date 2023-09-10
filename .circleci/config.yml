@@ -1,12 +1,12 @@
 version: 2.1
 orbs:
-  ruby: cimg/ruby@1.1.2
-  heroku: cimg/heroku@1.2.3
+  ruby: circleci/ruby@1.1.2
+  heroku: circleci/heroku@1.2.3
 
 jobs:
   build:
     docker:
-      - image: cimg/ruby:2.7
+      - image: circleci/ruby:2.7
     working_directory: ~/docker_train/src
     steps:
       - checkout:
